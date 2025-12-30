@@ -19,6 +19,13 @@ class NETWORKSTUDY_API ULobbyUserWidget : public UUserWidget
 {
 	GENERATED_BODY()
 
+public:
+	UFUNCTION(BlueprintCallable)
+	void SetInfo(ALobbyPlayerState* InPlayerState);
+
+	UFUNCTION(BlueprintCallable)
+	void RefreshUI();
+
 protected:
 	UPROPERTY(BlueprintReadWrite, meta=(BindWidget))
 	TObjectPtr<UTextBlock> Txt_Ready;
